@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans+Condensed:wght@300&display=swap');
+
+.landing{
+    background-image: url(../../assets/images/p.jpg);
+    background-size: cover;
+    height: auto;
+    display: grid;
+    background-position: center;
+    width: auto;
+
+    &__holder{
+       background-color: rgba(255, 255, 255, 0.0);
+       min-height: auto;
+       width: auto;
+       border-radius: 30px;
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       grid-template-rows: 48vh 2vh 48vh;
+
+       &__img{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        padding: 4rem;
+        }
+    }
+
+    &__logo{
+        height: 15rem;
+        width: 15rem;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__intro{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        display: grid;
+        place-items: center;
+        position: relative;
+
+        &-text{
+            padding: 8rem 4rem 1rem 10rem;
+            font-family: 'Merriweather', serif;
+            font-size: 40px;
+        }
+
+        &-button{
+            background-color: rgb(21, 190, 241);
+            color: white;
+            padding: 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            transition: all .2s;
+            cursor: pointer;
+
+
+            &:hover{
+                background-color: rgb(65, 210, 230);
+                color: black;
+                transform: translateY(-3px);
+            }
+
+            &:active{
+                background-color: rgb(45, 143, 160);
+                color: white; 
+                transform: translateY(-1px);
+            }
+        }
+    }
+    
+
+
+}

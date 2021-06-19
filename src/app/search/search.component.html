@@ -1,0 +1,19 @@
+<nav class="search">
+    <form class="search__form">
+        <input type="text" name="search" placeholder="Search for a recipe" class="search__input" [(ngModel)]="search">
+        <br>
+        <button type="submit" class="search__button" (click)="fetchRecipe()"> 🙈 Let's Search Food 🙈</button>
+    </form>
+</nav>
+<div class="food__card" >
+        <app-card *ngFor="let recipe of RecipeData" [url]="recipe.recipe.image" [name]="recipe.recipe.label"></app-card>
+        <ng-container *ngIf="RecipeData.length == 0">
+            <div class="layout">
+                  <a href="/"><i class="material-icons" style="padding: 37vw;">
+                     sentiment_very_dissatisfied
+                  </i></a>
+                  <img style="padding-left:10vw; width:79vw;" src="../../assets/images/not-found.png" /> 
+                  <img style="padding-left:10vw; width:75vw;" src="../../assets/images/error-404.png" /> 
+            </div>
+         </ng-container>      
+</div>
